@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  background: #f8f5f0;
+  color: #876445;
+}
+.hero {
+  position: relative;
+  background: url('assets/bg-vintage-paper.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: #b7a186;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(216,180,166,0.3);
+}
+.hero-content {
+  position: relative; z-index: 2; text-align: center;
+  background: rgba(255,255,255,0.6); padding: 2em; border-radius: 20px;
+  border: 2px solid #d8b4a6; box-shadow: 0 4px 32px #87644522;
+}
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #b7a186;
+  margin-bottom: 0.2em;
+}
+.hero p {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5em;
+  color: #876445;
+}
+.btn {
+  background: #d8b4a6;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  border-radius: 30px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1em;
+  text-decoration: none;
+  border: none;
+  margin-top: 1.5em;
+  box-shadow: 0 2px 6px #87644526;
+  transition: background 0.2s;
+}
+.btn.secondary {
+  background: #fffbe7;
+  color: #b7a186;
+  border: 1px solid #d8b4a6;
+}
+.btn.secondary:hover {
+  background: #d8b4a6;
+  color: #fff;
+}
+.countdown {
+  font-size: 1.3em;
+  margin-top: 1em;
+}
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(233,220,201,0.8);
+  border-radius: 24px;
+  margin-top: 2em;
+  box-shadow: 0 4px 24px #87644511;
+  border: 1px solid #cfcfc4;
+}
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.4em;
+  color: #b7a186;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.timeline-item,
+.event,
+.ucapan-list li {
+  background: #fffdf9;
+  border-left: 4px solid #d8b4a6;
+  border-radius: 12px;
+  margin-bottom: 1.5em;
+  padding: 1.2em 2em;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px #b7a18614;
+}
+.profil .person img {
+  border: 3px solid #cfcfc4;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px #87644518;
+}
+.love-icon { color: #d8b4a6; font-size:2.5em;}
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1em;}
+.gallery-grid img { width:100%; border-radius:10px; object-fit:cover; height:210px; }
+.music-btn { 
+  position:fixed; bottom:20px; right:20px; z-index:1000; 
+  background:#fffbe7; border-radius:50%; width:54px; height:54px; font-size:1.5em; 
+  border:none; box-shadow:0 2px 8px rgba(0,0,0,0.18); cursor:pointer;
+}
+.rsvp form { display:flex; flex-direction:column; gap:1em; max-width:350px; margin:0 auto;}
+.rsvp input, .rsvp select, .rsvp button { padding:0.8em; border-radius:7px; border:1px solid #d1ccc0;}
+.rsvp button { background:#d8b4a6; color:#fff; border:none; font-weight:bold; cursor:pointer;}
+#rsvp-list { margin-top:2em; }
+#rsvp-list p { background:#fffbe7; padding:.8em 1.2em; border-radius:8px; margin-bottom:0.5em; }
+.ucapan-list { list-style:none; padding:0; }
+.ucapan-list li { background:#fffbe7; margin:1em 0; padding:1em 1.5em; border-radius:10px; box-shadow: 0 2px 8px #b7a1861a;}
+.ucapan-list b { color:#b7a186; }
+.copy-btn { margin-left:10px; padding:.4em 1.3em; border-radius:15px; background:#d8b4a6; color:#fff; border:none; cursor:pointer;}
+.share { text-align:center; margin:2em 0;}
+.share button { padding:.7em 2em; background:#b7a186; color:#fff; border:none; border-radius:20px; margin:0 0.5em; cursor:pointer;}
+.share button:hover { background:#d8b4a6; }
+footer { text-align:center; padding:2em 0; background:#d8b4a6; color:#fff; margin-top:3em;}
+@media (max-width: 600px) {
+  .hero h1 { font-size:2em; }
+  .hero p, .countdown { font-size:1em; }
+  .profil .couple { flex-direction:column; gap:1em;}
+  .love-icon { margin:1em 0; }
+  section { padding: 30px 10px;}
+}
+.modal { position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(255,255,255,0.98); display:flex; align-items:center; justify-content:center; }
+.modal-content { text-align:center; background:#fffbe7; padding:2em 2em 1em;border-radius:20px; box-shadow:0 8px 16px rgba(0,0,0,0.15);}
+#open-invite-btn { margin-top:1em; padding:.8em 2em; background:#d8b4a6; color:#fff; border:none; border-radius:25px; font-size:1.2em; cursor:pointer;}

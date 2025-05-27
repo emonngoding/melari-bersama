@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Undangan Pernikahan Vintage | Nama Mempelai</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Vintage fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal Pembuka (undangan khusus tamu) -->
+  <div id="welcome-modal" class="modal">
+    <div class="modal-content">
+      <h2>Undangan Pernikahan</h2>
+      <p>Kepada Yth.<br><span id="guest-name">Tamu Undangan</span></p>
+      <button id="open-invite-btn">Buka Undangan</button>
+    </div>
+  </div>
+
+  <!-- Musik Vintage -->
+  <audio id="bg-music" loop>
+    <source src="assets/music-vintage.mp3" type="audio/mp3">
+  </audio>
+  <button class="music-btn" id="music-btn" aria-label="Putar Musik">
+    <span id="music-icon">🔊</span>
+  </button>
+
+  <!-- Hero Vintage -->
+  <section class="hero" id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Nama Mempelai</h1>
+      <p>Sabtu, 28 Juni 2025</p>
+      <div class="countdown" id="countdown"></div>
+      <a href="#acara" class="btn">Lihat Undangan</a>
+    </div>
+  </section>
+
+  <!-- Profil Mempelai -->
+  <section class="profil" id="profil">
+    <h2>Profil Mempelai</h2>
+    <div class="couple">
+      <div class="person">
+        <img src="assets/mempelai-pria.jpg" alt="Mempelai Pria">
+        <h3>Nama Pria</h3>
+        <p>Putra dari Bapak X & Ibu Y</p>
+      </div>
+      <div class="love-icon">❦</div>
+      <div class="person">
+        <img src="assets/mempelai-wanita.jpg" alt="Mempelai Wanita">
+        <h3>Nama Wanita</h3>
+        <p>Putri dari Bapak A & Ibu B</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Love Story Timeline -->
+  <section class="love-story" id="love-story">
+    <h2>Our Love Story</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Pertama Bertemu</h3>
+        <p>Deskripsi singkat tentang pertemuan pertama.</p>
+        <span>2018</span>
+      </div>
+      <div class="timeline-item">
+        <h3>Jadian</h3>
+        <p>Deskripsi singkat tentang jadian.</p>
+        <span>2019</span>
+      </div>
+      <div class="timeline-item">
+        <h3>Lamaran</h3>
+        <p>Deskripsi singkat tentang lamaran.</p>
+        <span>2024</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Acara -->
+  <section class="acara" id="acara">
+    <h2>Detail Acara</h2>
+    <div class="event">
+      <h3>Akad Nikah</h3>
+      <p>Sabtu, 28 Juni 2025 | 08.00 WIB</p>
+      <p>Lokasi: Masjid Besar, Kota XYZ</p>
+      <a href="https://maps.google.com/?q=Masjid+Besar+Kota+XYZ" target="_blank" class="btn secondary">Lihat Peta</a>
+      <button class="copy-btn" data-alamat="Masjid Besar, Kota XYZ">Salin Alamat</button>
+    </div>
+    <div class="event">
+      <h3>Resepsi</h3>
+      <p>Sabtu, 28 Juni 2025 | 11.00 - 14.00 WIB</p>
+      <p>Lokasi: Gedung Serbaguna, Kota XYZ</p>
+      <a href="https://maps.google.com/?q=Gedung+Serbaguna+Kota+XYZ" target="_blank" class="btn secondary">Lihat Peta</a>
+      <button class="copy-btn" data-alamat="Gedung Serbaguna, Kota XYZ">Salin Alamat</button>
+    </div>
+  </section>
+
+  <!-- Galeri Foto -->
+  <section class="galeri" id="galeri">
+    <h2>Galeri Foto</h2>
+    <div class="gallery-grid">
+      <img src="assets/img1.jpg" alt="Foto 1">
+      <img src="assets/img2.jpg" alt="Foto 2">
+      <img src="assets/img3.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <!-- RSVP Section -->
+  <section class="rsvp" id="rsvp">
+    <h2>Konfirmasi Kehadiran</h2>
+    <form id="rsvp-form">
+      <input type="text" name="nama" placeholder="Nama Anda" required>
+      <select name="kehadiran" required>
+        <option value="">Akan hadir?</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
+      </select>
+      <input type="text" name="ucapan" placeholder="Ucapan/doa" required>
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="rsvp-message"></div>
+    <div id="rsvp-list"></div>
+  </section>
+
+  <!-- Buku Tamu/Ucapan -->
+  <section class="ucapan" id="ucapan">
+    <h2>Buku Tamu & Ucapan</h2>
+    <ul class="ucapan-list" id="ucapan-list"></ul>
+  </section>
+
+  <!-- Share -->
+  <section class="share">
+    <h2>Bagikan Undangan</h2>
+    <button onclick="shareWA()">WhatsApp</button>
+    <button onclick="shareIG()">Instagram</button>
+    <button onclick="shareFB()">Facebook</button>
+  </section>
+
+  <footer>
+    <p>© 2025 Nama Mempelai. All Rights Reserved.</p>
+    <p>Design by emonngoding</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
